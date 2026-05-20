@@ -236,14 +236,8 @@
             <div class="space-y-2">
                 <label class="block text-xs font-bold text-slate-400">하단 문구 스타일</label>
                 <div class="grid grid-cols-3 gap-2">
-                    <button onclick="setEmblemStyle('championship')" id="emblem-championship" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-700 border border-emerald-500 text-xs font-bold text-center shadow-sm">
-                        ⚡ SPORTS DAY
-                    </button>
-                    <button onclick="setEmblemStyle('victory')" id="emblem-victory" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
-                        🏆 CHAMPION
-                    </button>
-                    <button onclick="setEmblemStyle('sports')" id="emblem-sports" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
-                        🥇 Final Winner
+                    <button onclick="setEmblemStyle('life4')" id="emblem-life4" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-700 border border-emerald-500 text-xs font-bold text-center shadow-sm">
+                        📸 인생네컷
                     </button>
                     <button onclick="setEmblemStyle('ordinary')" id="emblem-ordinary" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
                         ✨ Ordinary but Special
@@ -251,8 +245,23 @@
                     <button onclick="setEmblemStyle('favorite')" id="emblem-favorite" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
                         🌟 My Favorite Day
                     </button>
-                    <button onclick="setEmblemStyle('life4')" id="emblem-life4" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
-                        📸 인생네컷
+                    <button onclick="setEmblemStyle('scienceday')" id="emblem-scienceday" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
+                        🔬 SCIENCE DAY
+                    </button>
+                    <button onclick="setEmblemStyle('eureka')" id="emblem-eureka" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
+                        💡 Eureka Moment
+                    </button>
+                    <button onclick="setEmblemStyle('chemistry')" id="emblem-chemistry" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
+                        ⚗️ 우리들의 화학반응
+                    </button>
+                    <button onclick="setEmblemStyle('championship')" id="emblem-championship" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
+                        ⚡ SPORTS DAY
+                    </button>
+                    <button onclick="setEmblemStyle('victory')" id="emblem-victory" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
+                        🏆 CHAMPION
+                    </button>
+                    <button onclick="setEmblemStyle('sports')" id="emblem-sports" class="emblem-btn p-2 rounded-lg bg-slate-50 text-slate-500 border border-slate-200 text-xs font-bold text-center">
+                        🥇 Final Winner
                     </button>
                 </div>
             </div>
@@ -705,6 +714,9 @@
             else if (activeEmblem === 'ordinary')  brandTitle = "✨ Ordinary but Special ✨";
             else if (activeEmblem === 'favorite')  brandTitle = "🌟 My Favorite Day 🌟";
             else if (activeEmblem === 'life4')     brandTitle = "📸 인생네컷 📸";
+            else if (activeEmblem === 'scienceday') brandTitle = "🔬 SCIENCE DAY 🔬";
+            else if (activeEmblem === 'eureka')    brandTitle = "💡 Eureka Moment 💡";
+            else if (activeEmblem === 'chemistry') brandTitle = "⚗️ 우리들의 화학반응 ⚗️";
 
             ctx.fillStyle = activeConfig.text;
             ctx.font = '800 52px sans-serif';
