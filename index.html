@@ -105,10 +105,10 @@
         <div class="flex items-center justify-center space-x-2">
             <span class="text-3xl animate-bounce">🏅</span>
             <h1 class="font-sports text-2xl tracking-wide bg-gradient-to-r from-emerald-500 via-amber-500 to-rose-500 bg-clip-text text-transparent">
-                2026 체육대회 인생4컷
+                우리학교 인생4컷
             </h1>
         </div>
-        <p class="text-xs text-slate-500 mt-1 font-bold tracking-wider uppercase">Sports Day 2x2 Photo booth</p>
+        <p class="text-xs text-slate-500 mt-1 font-bold tracking-wider uppercase">2x2 Photo booth</p>
     </header>
 
     <main class="w-full max-w-md px-4 py-6 flex-grow flex flex-col justify-start space-y-6">
@@ -700,7 +700,6 @@
             ctx.textBaseline = 'alphabetic';
             ctx.fillText(brandTitle, cWidth / 2, footerY);
 
-            // ▼ 핵심 변경: 학교명 입력값 사용
             const schoolName = document.getElementById('schoolName').value.trim() || 'Gochang Middle School';
             ctx.fillStyle = '#64748b';
             ctx.font = 'bold 26px sans-serif';
