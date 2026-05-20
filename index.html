@@ -134,6 +134,7 @@
             <div>
                 <label class="block text-xs font-bold text-slate-400 mb-1">학교명 <span class="font-normal text-slate-300">(콜라주 하단 표시)</span></label>
                 <input type="text" id="schoolName" placeholder="예: OOO Middle School" maxlength="40"
+                       oninput="localStorage.setItem('savedSchoolName', this.value)"
                        class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all text-center">
             </div>
         </section>
@@ -369,7 +370,6 @@
 
         function playCountBeep() { playBeep(880, 0.12); }
         function playStartChime() {
-            // 시작 알림: 올라가는 두 음
             playBeep(880, 0.12, 0);
             playBeep(1320, 0.2, 0.15);
         }
@@ -388,6 +388,8 @@
         };
 
         window.addEventListener('DOMContentLoaded', async () => {
+            const saved = localStorage.getItem('savedSchoolName');
+            if (saved) document.getElementById('schoolName').value = saved;
             await initCamera();
         });
 
@@ -452,7 +454,6 @@
                     playCountBeep();
                 } else {
                     clearInterval(interval);
-                    // ▼ 핵심 변경: "시작" 표시 후 0.8초 뒤 촬영 진입
                     fsCountdown.innerText = '시작';
                     playStartChime();
                     setTimeout(() => {
@@ -711,7 +712,7 @@
             ctx.textBaseline = 'alphabetic';
             ctx.fillText(brandTitle, cWidth / 2, footerY);
 
-            const schoolName = document.getElementById('schoolName').value.trim() || 'Gochang Middle School';
+            const schoolName = document.getElementById('schoolName').value.trim() || 'OOO Middle School';
             ctx.fillStyle = '#64748b';
             ctx.font = 'bold 26px sans-serif';
             ctx.fillText(schoolName, cWidth / 2, footerY + 56);
